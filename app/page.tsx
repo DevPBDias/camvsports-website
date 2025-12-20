@@ -1,65 +1,134 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { Instagram, Facebook, Twitter, Mail, Send } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="relative min-h-screen flex flex-col items-center justify-center p-6 text-white overflow-hidden">
+      {/* Mesh Background */}
+      <div className="mesh-bg" />
+
+      {/* Main Content */}
+      <main className="relative z-10 w-full max-w-4xl flex flex-col items-center gap-12 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex flex-col items-center"
+        >
+          <div className="relative w-64 h-32 md:w-80 md:h-40 animate-float">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/Logo CAMV Sports.png"
+              alt="Camv Sports Logo"
+              fill
+              className="object-contain"
+              priority
             />
-            Deploy Now
+          </div>
+        </motion.div>
+
+        {/* Hero Section */}
+        <div className="space-y-6">
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-6xl md:text-8xl font-black tracking-tighter"
+          >
+            EM <span className="text-gradient">CONSTRUÇÃO</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+          >
+            Estamos preparando uma experiência esportiva sem precedentes. Em
+            breve, o novo hub da{" "}
+            <span className="text-white font-semibold">Camv Sports</span> estará
+            no ar.
+          </motion.p>
+        </div>
+
+        {/* Newsletter Signup (Mockup) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="w-full max-w-md glass p-1 rounded-2xl flex items-center gap-2 focus-within:ring-2 focus-within:ring-accent/50 transition-all"
+        >
+          <div className="pl-4 text-muted-foreground">
+            <Mail size={20} />
+          </div>
+          <input
+            type="email"
+            placeholder="Seu melhor e-mail..."
+            className="bg-transparent border-none outline-none flex-1 py-4 text-white placeholder:text-muted-foreground/50"
+          />
+          <button className="bg-accent hover:bg-accent/90 text-white font-bold p-3 px-6 rounded-xl transition-all flex items-center gap-2 group">
+            <span className="hidden sm:inline">Notificar-me</span>
+            <Send
+              size={18}
+              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+            />
+          </button>
+        </motion.div>
+
+        {/* Social Links */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="flex gap-6 items-center"
+        >
+          <a
+            href="#"
+            className="p-3 glass rounded-full hover:text-accent transition-colors group"
+          >
+            <Instagram
+              size={24}
+              className="group-hover:scale-110 transition-transform"
+            />
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="p-3 glass rounded-full hover:text-accent transition-colors group"
           >
-            Documentation
+            <Facebook
+              size={24}
+              className="group-hover:scale-110 transition-transform"
+            />
           </a>
-        </div>
+          <a
+            href="#"
+            className="p-3 glass rounded-full hover:text-accent transition-colors group"
+          >
+            <Twitter
+              size={24}
+              className="group-hover:scale-110 transition-transform"
+            />
+          </a>
+        </motion.div>
+
+        {/* Status Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-widest"
+        >
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+          Lançamento previsto: Q1 2026
+        </motion.div>
       </main>
+
+      {/* Footer Decoration */}
+      <footer className="absolute bottom-8 text-white/20 text-[10px] uppercase tracking-[0.5em] font-medium">
+        © 2025 CAMV SPORTS • ALL RIGHTS RESERVED
+      </footer>
     </div>
   );
 }
