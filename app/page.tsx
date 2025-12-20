@@ -53,30 +53,6 @@ export default function Home() {
           </motion.p>
         </div>
 
-        {/* Newsletter Signup (Mockup) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="w-full max-w-md glass p-1 rounded-2xl flex items-center gap-2 focus-within:ring-2 focus-within:ring-accent/50 transition-all"
-        >
-          <div className="pl-4 text-muted-foreground">
-            <Mail size={20} />
-          </div>
-          <input
-            type="email"
-            placeholder="Seu melhor e-mail..."
-            className="bg-transparent border-none outline-none flex-1 py-4 text-white placeholder:text-muted-foreground/50"
-          />
-          <button className="bg-accent hover:bg-accent/90 text-white font-bold p-3 px-6 rounded-xl transition-all flex items-center gap-2 group">
-            <span className="hidden sm:inline">Notificar-me</span>
-            <Send
-              size={18}
-              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-            />
-          </button>
-        </motion.div>
-
         {/* Social Links */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -85,28 +61,10 @@ export default function Home() {
           className="flex gap-6 items-center"
         >
           <a
-            href="#"
+            href="https://www.instagram.com/camv_supervolei/"
             className="p-3 glass rounded-full hover:text-accent transition-colors group"
           >
             <Instagram
-              size={24}
-              className="group-hover:scale-110 transition-transform"
-            />
-          </a>
-          <a
-            href="#"
-            className="p-3 glass rounded-full hover:text-accent transition-colors group"
-          >
-            <Facebook
-              size={24}
-              className="group-hover:scale-110 transition-transform"
-            />
-          </a>
-          <a
-            href="#"
-            className="p-3 glass rounded-full hover:text-accent transition-colors group"
-          >
-            <Twitter
               size={24}
               className="group-hover:scale-110 transition-transform"
             />
@@ -121,7 +79,7 @@ export default function Home() {
           className="flex items-center gap-2 text-xs font-mono text-muted-foreground uppercase tracking-widest"
         >
           <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          Lançamento previsto: Q1 2026
+          Lançamento previsto: 31/12/2025
         </motion.div>
       </main>
 
