@@ -76,7 +76,7 @@ export function StatsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col items-center text-center px-4 lg:px-8 lg:border-l lg:border-[#005096] first:lg:border-l-0"
+            className="flex flex-col items-center text-center px-4 lg:px-8 lg:border-l-2 lg:border-[#005096] first:lg:border-l-0"
           >
             <p className="font-heading text-5xl font-black text-white sm:text-6xl">
               <StatValue value={stat.value} suffix={stat.suffix} />
