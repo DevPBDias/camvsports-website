@@ -3,7 +3,7 @@ import { ArrowDownCircleIcon, Instagram } from "lucide-react";
 
 export function HeroContent() {
   return (
-    <section className="flex w-full h-full flex-col justify-center items-center px-3 pt-4 sm:px-6 sm:pb-14 lg:px-[15%] lg:pb-24 lg:pt-28">
+    <section className="flex w-full h-full flex-col justify-center items-center px-3 pt-4 sm:px-6 sm:pb-14 lg:px-[12%] lg:pb-24">
       {/* Bloco de texto (mobile centralizado, desktop alinhado à esquerda) */}
       <div className="flex w-full flex-col items-center text-center">
         <motion.h1
@@ -38,36 +38,15 @@ export function HeroContent() {
         >
           <a
             href="#projeto"
-            className="min-w-48 2xl:min-w-80 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
+            className="min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
           >
             Conheça o projeto
           </a>
           <a
             href="#patrocinadores"
-            className="min-w-48 2xl:min-w-80 inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/5 px-6 py-3 text-sm text-white shadow-md backdrop-blur-md transition hover:bg-white/10"
+            className="min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/5 px-6 py-3 text-sm text-white shadow-md backdrop-blur-md transition hover:bg-white/10"
           >
             Seja um patrocinador
-          </a>
-        </motion.div>
-
-        {/* Social - focando no Instagram por enquanto */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
-          className="mt-6 flex items-center gap-3 text-xs text-white/70"
-        >
-          <span className="hidden text-[11px] uppercase tracking-[0.22em] sm:inline">
-            Acompanhe nosso dia a dia
-          </span>
-          <a
-            href="https://www.instagram.com/camv_supervolei/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2 text-xs font-medium shadow-md backdrop-blur-md transition hover:bg-black/50"
-          >
-            <Instagram size={16} />
-            <span>@camv_supervolei</span>
           </a>
         </motion.div>
 

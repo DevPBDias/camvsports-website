@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Instagram, Menu, X } from "lucide-react";
 
 import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
-  { label: "INÍCIO", href: "#inicio" },
-  { label: "NOSSA HISTÓRIA", href: "#historia" },
+  { label: "PROJETO", href: "#historia" },
   { label: "COMISSÃO TÉCNICA", href: "#comissao-tecnica" },
   { label: "CONQUISTAS", href: "#conquistas" },
   { label: "CALENDÁRIO", href: "#calendario" },
@@ -39,7 +39,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-4 sm:px-8 lg:px-16 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-4 sm:px-8 transition-all duration-300 ${
         isScrolled
           ? "bg-[#005096]/95 shadow-lg backdrop-blur-md"
           : "bg-transparent"
@@ -57,12 +57,12 @@ export function Header() {
           />
         </div>
         <span className="hidden text-sm font-semibold tracking-[0.18em] uppercase sm:block">
-          CAMV Sports
+          CAMV <br /> Sports
         </span>
       </div>
 
       {/* Navegação desktop */}
-      <nav className="hidden items-center gap-8 text-xs font-medium uppercase tracking-[0.18em] lg:flex">
+      <nav className="hidden items-center gap-4 xl:gap-6 text-xs font-medium uppercase tracking-[0.18em] lg:flex">
         {NAV_LINKS.map((link) => (
           <a
             key={link.href}
@@ -73,14 +73,25 @@ export function Header() {
             {link.label}
           </a>
         ))}
-        <a
-          href="#patrocinios"
-          onClick={handleNavigate}
-          className="rounded-xl bg-accent px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
-        >
-          Seja um patrocinador
-        </a>
       </nav>
+
+      {/* Social - focando no Instagram por enquanto */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
+        className="lg:flex items-center gap-3 text-xs text-white/70 hidden"
+      >
+        <a
+          href="https://www.instagram.com/camv_supervolei/"
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2 text-sm font-medium shadow-md backdrop-blur-md transition hover:bg-black/50"
+        >
+          <Instagram size={18} />
+          <span className="hidden xl:flex">@camv_supervolei</span>
+        </a>
+      </motion.div>
 
       {/* Botão burger (mobile/tablet) */}
       <button
@@ -111,14 +122,6 @@ export function Header() {
               {link.label}
             </a>
           ))}
-
-          <a
-            href="#patrocinios"
-            onClick={handleNavigate}
-            className="mt-3 inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
-          >
-            Seja um patrocinador
-          </a>
         </nav>
       </div>
     </header>
