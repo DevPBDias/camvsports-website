@@ -35,12 +35,12 @@ export function HistoryCoachSection() {
             Fundadora e Gestora do CAMV Sports
           </p>
 
-          <p className="text-sm leading-relaxed sm:text-base lg:text-sm xl:text-base 2xl:text-xl">
+          <p className="text-sm font-medium leading-relaxed sm:text-base lg:text-sm xl:text-base 2xl:text-xl">
             Jeide Cristiane Rudgeri de Brito nasceu em Goiânia. Começou a
             praticar o vôlei quando criança, tornando-se sua paixão. Desde
             então, nunca mais largou o esporte.
           </p>
-          <p className="text-sm leading-relaxed sm:text-base lg:text-sm xl:text-base 2xl:text-xl">
+          <p className="text-sm font-medium leading-relaxed sm:text-base lg:text-sm xl:text-base 2xl:text-xl">
             Em 2001, formou-se em Educação Física pela ESEFEGO, iniciando sua
             trajetória dentro do vôlei como treinadora. De lá para cá, coleciona
             inúmeras conquistas e campanhas de destaque, como vice-campeonato da
@@ -51,7 +51,7 @@ export function HistoryCoachSection() {
           <h3 className="mt-4 font-heading text-xl font-bold uppercase tracking-wide text-background sm:text-2xl lg:text-2xl xl:text-3xl">
             CARREIRA
           </h3>
-          <ul className="space-y-1 text-sm leading-relaxed sm:text-base lg:text-sm xl:text-base 2xl:text-xl">
+          <ul className="space-y-1 font-medium text-sm leading-relaxed sm:text-base lg:text-sm xl:text-base 2xl:text-xl">
             <li>
               &gt; Campeã Brasileira Sub-18 Feminino pela Seleção Goiana 2ª
               Divisão - 2016

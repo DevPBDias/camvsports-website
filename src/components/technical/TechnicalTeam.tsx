@@ -80,7 +80,7 @@ export function TechnicalTeamSection() {
           <h2 className="font-heading text-3xl font-black uppercase tracking-wide text-white md:text-4xl lg:text-5xl xl:text-6xl">
             Equipe Multidisciplinar
           </h2>
-          <p className="max-w-2xl text-sm text-white/90 sm:text-base lg:text-lg">
+          <p className="max-w-2xl text-sm font-medium text-white/90 sm:text-base lg:text-lg">
             Focada em performance, saúde e desenvolvimento integral dos atletas
           </p>
         </motion.div>

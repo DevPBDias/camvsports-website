@@ -24,7 +24,7 @@ export function CalendarSection() {
   return (
     <section
       id="calendario"
-      className="hidden relative w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
+      className="relative w-full overflow-hidden bg-white py-16 sm:py-20 lg:py-24"
     >
       {/* Padrão de rede de vôlei sutil no fundo */}
       <CalendarBackground />
@@ -53,7 +53,7 @@ export function CalendarSection() {
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-8"
         >
-          <div className="hidden lg:block relative h-20 w-20 overflow-hidden rounded-full border-2 border-[#005096] sm:h-24 sm:w-24">
+          <div className="hidden lg:block relative h-20 w-20 overflow-hidden rounded-full border-2 border-[#005096] xl:h-20 xl:w-20">
             <Image
               src={logo}
               alt="Logo CAMV Sports"
@@ -75,7 +75,7 @@ export function CalendarSection() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="mx-auto max-w-6xl text-center"
         >
-          <p className="text-sm text-left lg:text-center leading-relaxed text-[#1E1E1E]/80 sm:text-base lg:text-lg">
+          <p className="text-sm text-left font-medium lg:text-center leading-relaxed text-[#1E1E1E]/80 sm:text-base lg:text-lg">
             Investir no nosso projeto de voleibol é ter sua marca atrelada a uma
             equipe que não só participa, mas domina competições. Em 2024,
             disputamos 40 campeonatos e subimos ao pódio em 37 deles, garantindo
