@@ -2,6 +2,8 @@ import { Hero } from "@/components/hero/Hero";
 import { StatsSection } from "@/components/stats/Stats";
 import { HistoryTeamSection } from "@/components/history/HistoryTeam";
 import { HistoryCoachSection } from "@/components/history/HistoryCoach";
+import { TechnicalTeamSection } from "@/components/technical/TechnicalTeam";
+import { CalendarSection } from "@/components/calendar/CalendarSection";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <StatsSection />
       <HistoryTeamSection />
       <HistoryCoachSection />
+      <TechnicalTeamSection />
+      <CalendarSection />
     </main>
   );
 }
