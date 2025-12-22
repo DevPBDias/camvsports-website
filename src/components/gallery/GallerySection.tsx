@@ -6,31 +6,34 @@ import { Camera } from "lucide-react";
 import heroTeamPhoto from "@/assets/images/hero_team_volley.jpg";
 import projectTeamPhoto from "@/assets/images/project_team.png";
 import projectCoachPhoto from "@/assets/images/project_coach.png";
+import volleyNetPhoto from "@/assets/images/rede_volei.png";
+import zoomNetPhoto from "@/assets/images/rede_zoom.png";
 
 const galleryImages = [
   {
     id: 1,
     src: heroTeamPhoto,
     alt: "Equipe CAMV Sports com troféus",
-    span: "col-span-1",
   },
   {
     id: 2,
     src: projectTeamPhoto,
     alt: "Equipe masculina CAMV Sports",
-    span: "col-span-1",
   },
   {
     id: 3,
     src: projectCoachPhoto,
     alt: "Equipe feminina CAMV Sports",
-    span: "col-span-1",
   },
   {
     id: 4,
-    src: projectTeamPhoto,
-    alt: "Equipe CAMV Sports em competição",
-    span: "col-span-1",
+    src: volleyNetPhoto,
+    alt: "Treinamento intensivo",
+  },
+  {
+    id: 5,
+    src: zoomNetPhoto,
+    alt: "Foco no detalhe do jogo",
   },
 ];
 
@@ -69,92 +72,101 @@ export function GallerySection() {
           </h2>
         </motion.div>
 
-        {/* Grid de imagens - layout igual à imagem */}
+        {/* Grid de imagens - layout solicitado */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 sm:items-stretch"
+          className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4"
         >
-          {/* Primeira imagem - topo esquerda */}
+          {/* 1. Topo Esquerda */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl sm:aspect-[4/3]"
+            className="group relative aspect-square overflow-hidden rounded-xl bg-[#005096]/5 col-span-1 lg:col-span-2 lg:aspect-video"
           >
             <Image
               src={galleryImages[0].src}
               alt={galleryImages[0].alt}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(min-width: 1024px) 50vw, 50vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#005096]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </motion.div>
 
-          {/* Segunda imagem - topo direita */}
+          {/* 2. Topo Direita */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl sm:aspect-[4/3]"
+            className="group relative aspect-square overflow-hidden rounded-xl bg-[#005096]/5 col-span-1 lg:col-span-2 lg:aspect-video"
           >
             <Image
               src={galleryImages[1].src}
               alt={galleryImages[1].alt}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(min-width: 1024px) 50vw, 50vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#005096]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </motion.div>
 
-          {/* Terceira imagem - baixo esquerda */}
+          {/* 3. Baixo Esquerda (1 imagem) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="group relative aspect-[4/3] overflow-hidden rounded-xl sm:h-full sm:aspect-auto"
+            className="group relative aspect-square overflow-hidden rounded-xl bg-[#005096]/5 col-span-1 lg:col-span-2 lg:aspect-video"
           >
             <Image
               src={galleryImages[2].src}
               alt={galleryImages[2].alt}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="(min-width: 640px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              sizes="(min-width: 1024px) 50vw, 50vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#005096]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </motion.div>
 
-          {/* Quarta área - baixo direita (com 2 fotos lado a lado) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: 0.45 }}
-            className="grid grid-cols-2 gap-2 aspect-[4/3] sm:gap-3 sm:h-full sm:aspect-auto sm:items-stretch"
-          >
-            <div className="group relative h-full overflow-hidden rounded-xl">
+          {/* 4. Baixo Direita (2 imagens lado a lado) */}
+          <div className="col-span-1 grid grid-cols-2 gap-2 sm:gap-4 lg:col-span-2 lg:gap-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="group relative aspect-[3/4] overflow-hidden rounded-xl bg-[#005096]/5 lg:aspect-square"
+            >
               <Image
                 src={galleryImages[3].src}
                 alt={galleryImages[3].alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(min-width: 640px) 25vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(min-width: 1024px) 25vw, 25vw"
               />
-            </div>
-            <div className="group relative h-full overflow-hidden rounded-xl">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="group relative aspect-[3/4] overflow-hidden rounded-xl bg-[#005096]/5 lg:aspect-square"
+            >
               <Image
-                src={galleryImages[0].src}
-                alt="Mais momentos CAMV Sports"
+                src={galleryImages[4].src}
+                alt={galleryImages[4].alt}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
-                sizes="(min-width: 640px) 25vw, 50vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(min-width: 1024px) 25vw, 25vw"
               />
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </motion.div>
 
         {/* Botão CTA */}
