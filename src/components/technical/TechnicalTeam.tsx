@@ -2,47 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import jeidePhoto from "@/assets/images/project_coach.png";
+import user from "@/assets/icons-logo/user.png";
 import { TechnicalBackground } from "./TechnicalBackground";
-
-const teamMembers = [
-  {
-    name: "JEIDE RUDGERI",
-    role: "Treinadora Nível IV da CBV",
-  },
-  {
-    name: "DIOGO CAVALCANTE",
-    role: "Treinador Nível III da CBV",
-  },
-  {
-    name: "FERNANDO ARAUJO",
-    role: "Preparador Físico",
-  },
-  {
-    name: "LUCILIUS MARTINS",
-    role: "Fisioterapeuta",
-  },
-  {
-    name: "MARCO TÚLIO",
-    role: "Social Media",
-  },
-  {
-    name: "KATIÚCIA MARQUEZIN",
-    role: "Psicóloga",
-  },
-  {
-    name: "BEATRIZ MALTA",
-    role: "Odontóloga",
-  },
-  {
-    name: "PAULO HENRIQUE VAZ",
-    role: "Estagiário",
-  },
-  {
-    name: "TALLYSSON CAVALCANTE",
-    role: "Estagiário",
-  },
-];
+import { technical_staff } from "@/constants/technical_staff";
 
 export function TechnicalTeamSection() {
   return (
@@ -87,9 +49,9 @@ export function TechnicalTeamSection() {
 
         {/* Grid de membros da equipe */}
         <div className="grid w-full grid-cols-1 gap-4 sm:gap-2 lg:grid-cols-3 lg:gap-6 mt-6">
-          {teamMembers.map((member, index) => (
+          {technical_staff.map((staff, index) => (
             <motion.div
-              key={member.name}
+              key={staff.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
@@ -102,23 +64,33 @@ export function TechnicalTeamSection() {
             >
               {/* Foto circular */}
               <div className="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-white/30 transition-all duration-300 group-hover:border-[#01B6F5] group-hover:scale-105 sm:h-28 sm:w-28 lg:h-32 lg:w-32">
-                <Image
-                  src={jeidePhoto}
-                  alt={member.name}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 128px, 112px"
-                />
+                {staff.image ? (
+                  <Image
+                    src={staff.image}
+                    alt={staff.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 128px, 112px"
+                  />
+                ) : (
+                  <Image
+                    src={user}
+                    alt={staff.name}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 1024px) 128px, 112px"
+                  />
+                )}
               </div>
 
               {/* Nome */}
               <h3 className="mb-2 text-center font-heading text-sm font-black uppercase tracking-wide text-white transition-colors group-hover:text-[#01B6F5] sm:text-base lg:text-lg xl:text-xl">
-                {member.name}
+                {staff.name}
               </h3>
 
               {/* Função */}
               <p className="text-center text-xs text-white/80 sm:text-sm lg:text-base">
-                {member.role}
+                {staff.role}
               </p>
             </motion.div>
           ))}
