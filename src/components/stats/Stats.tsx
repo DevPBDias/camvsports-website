@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { Divider } from "./Divider";
 
 const stats = [
   {
@@ -68,26 +69,27 @@ export function StatsSection() {
       id="conquistas"
       className="flex items-center justify-center bg-[#01B6F5] px-6 py-16 sm:px-8 sm:py-20"
     >
-      <div className="flex w-full max-w-md flex-col items-center gap-10 sm:max-w-lg lg:max-w-3xl lg:flex-row lg:items-stretch lg:justify-between">
+      <div className="flex w-full max-w-md flex-col items-center gap-10 sm:max-w-lg lg:max-w-3xl xl:max-w-5xl lg:flex-row lg:items-stretch lg:justify-center">
         {stats.map((stat, index) => (
-          <motion.div
-            key={stat.labelTop}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="flex flex-col items-center text-center px-4 lg:px-8 lg:border-l-2 lg:border-[#005096] first:lg:border-l-0"
-          >
-            <p className="font-heading text-5xl font-black text-white sm:text-6xl">
-              <StatValue value={stat.value} suffix={stat.suffix} />
-            </p>
-            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#1E1E1E] sm:text-sm">
-              {stat.labelTop}
-            </p>
-            {index < stats.length - 1 && (
-              <div className="mt-6 h-[2px] w-24 bg-[#005096] sm:w-32 lg:hidden" />
-            )}
-          </motion.div>
+          <div key={stat.labelTop} className="flex items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="flex flex-col items-center text-center px-4"
+            >
+              <p className="font-heading text-5xl sm:text-6xl 2xl:text-8xl font-black text-white">
+                <StatValue value={stat.value} suffix={stat.suffix} />
+              </p>
+
+              <p className="mt-3 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-[#1E1E1E]">
+                {stat.labelTop}
+              </p>
+            </motion.div>
+
+            {index < stats.length - 1 && <Divider delay={index * 0.15} />}
+          </div>
         ))}
       </div>
     </section>
