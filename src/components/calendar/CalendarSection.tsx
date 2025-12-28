@@ -4,21 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import logo from "@/assets/icons-logo/Logo CAMV Sports.png";
 import { CalendarBackground } from "./CalendarBackground";
+import { calendar_tournaments } from "@/constants/calendar_tournaments";
 
-const calendarMonths = [
-  { month: "FEVEREIRO", tournaments: 1 },
-  { month: "MARÇO", tournaments: 3 },
-  { month: "ABRIL", tournaments: 3 },
-  { month: "MAIO", tournaments: 5 },
-  { month: "JUNHO", tournaments: 4 },
-  { month: "AGOSTO", tournaments: 5 },
-  { month: "SETEMBRO", tournaments: 5 },
-  { month: "OUTUBRO", tournaments: 4 },
-  { month: "NOVEMBRO", tournaments: 5 },
-  { month: "DEZEMBRO", tournaments: 3 },
+const mainCompetitions = [
+  "CBI - Campeonato Brasileiro Interclubes",
+  "Taça Brasília",
+  "Taça Paraná",
 ];
-
-const mainCompetitions = ["CBI", "Taça Brasília", "Taça Paraná"];
 
 export function CalendarSection() {
   return (
@@ -93,19 +85,19 @@ export function CalendarSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:gap-6"
         >
-          {calendarMonths.map((item, index) => (
+          {calendar_tournaments.map((item) => (
             <div
-              key={item.month}
-              className="flex flex-col items-center justify-center rounded-lg bg-[#005096] p-4 text-center transition-all duration-300 hover:bg-[#005096]/90 hover:shadow-lg sm:p-6"
+              key={item.id}
+              className="hover:scale-105 flex flex-col items-center justify-center rounded-lg bg-[#005096] p-4 text-center transition-all duration-300 hover:bg-[#005096]/90 hover:shadow-lg sm:p-6"
             >
               <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-white md:text-base lg:text-lg xl:text-xl">
                 {item.month}
               </p>
               <p className="text-3xl font-black font-heading text-white md:text-4xl lg:text-5xl xl:text-6xl">
-                {item.tournaments}
+                {item.quantity}
               </p>
-              <p className="mt-1 text-xs uppercase tracking-wide text-white/80 lg:text-sm xl:text-lg">
-                {item.tournaments === 1 ? "TORNEIO" : "TORNEIOS"}
+              <p className="mt-1 text-xs uppercase tracking-wide text-white/80 lg:text-sm xl:text-base">
+                {item.quantity === 1 ? "TORNEIO" : "TORNEIOS"}
               </p>
             </div>
           ))}
@@ -117,7 +109,7 @@ export function CalendarSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="mx-auto w-full max-w-7xl flex flex-col items-center justify-center rounded-lg border-2 border-[#005096] bg-white p-6 sm:p-8"
+          className="hover:scale-105 transition-all duration-300 mx-auto w-full max-w-7xl flex flex-col items-center justify-center rounded-lg border-2 border-[#005096] bg-white p-6 sm:p-8"
         >
           <h3 className="mb-4 font-heading text-xl font-black uppercase tracking-wide text-[#005096] sm:text-2xl">
             Principais Competições:
@@ -126,7 +118,7 @@ export function CalendarSection() {
             {mainCompetitions.map((competition) => (
               <span
                 key={competition}
-                className="rounded-lg bg-[#005096]/10 px-4 py-2 text-sm font-semibold text-[#005096] sm:text-base"
+                className="rounded-lg bg-[#005096]/10 px-4 py-2 text-sm font-semibold text-[#005096] sm:text- lg:text-lg"
               >
                 {competition}
               </span>

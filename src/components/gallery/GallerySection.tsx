@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Camera } from "lucide-react";
-import heroTeamPhoto from "@/assets/images/hero_team_volley.jpg";
+import heroTeamPhoto from "@/assets/images/gallery_prizes.png";
 import projectTeamPhoto from "@/assets/images/project_team.png";
 import projectCoachPhoto from "@/assets/images/project_coach.png";
-import volleyNetPhoto from "@/assets/images/rede_volei.png";
-import zoomNetPhoto from "@/assets/images/rede_zoom.png";
+import manTeamPhoto from "@/assets/images/man_team.png";
+import womenTeamPhoto from "@/assets/images/women_team.png";
 
 const galleryImages = [
   {
@@ -17,23 +17,23 @@ const galleryImages = [
   },
   {
     id: 2,
-    src: projectTeamPhoto,
+    src: manTeamPhoto,
     alt: "Equipe masculina CAMV Sports",
   },
   {
     id: 3,
     src: projectCoachPhoto,
-    alt: "Equipe feminina CAMV Sports",
+    alt: "Treinadora da CAMV Sports",
   },
   {
     id: 4,
-    src: volleyNetPhoto,
-    alt: "Treinamento intensivo",
+    src: projectTeamPhoto,
+    alt: "Equipe feminina CAMV Sports",
   },
   {
     id: 5,
-    src: zoomNetPhoto,
-    alt: "Foco no detalhe do jogo",
+    src: womenTeamPhoto,
+    alt: "Equipe feminina CAMV Sports",
   },
 ];
 
@@ -68,7 +68,7 @@ export function GallerySection() {
           className="text-center"
         >
           <h2 className="font-heading text-3xl font-black uppercase tracking-wide text-[#005096] sm:text-4xl md:text-5xl lg:text-6xl">
-            Momentos que Constroem Nossa História
+            Momentos que Constroem <br /> Nossa História
           </h2>
         </motion.div>
 
@@ -95,7 +95,11 @@ export function GallerySection() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
               sizes="(min-width: 1024px) 50vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#005096]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">
+              <p className="text-white font-semibold text-sm mb-4">
+                {galleryImages[0].alt}
+              </p>
+            </div>
           </motion.div>
 
           {/* 2. Topo Direita */}
@@ -110,10 +114,14 @@ export function GallerySection() {
               src={galleryImages[1].src}
               alt={galleryImages[1].alt}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               sizes="(min-width: 1024px) 50vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#005096]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">
+              <p className="text-white font-semibold text-sm mb-4">
+                {galleryImages[1].alt}
+              </p>
+            </div>
           </motion.div>
 
           {/* 3. Baixo Esquerda (1 imagem) */}
@@ -128,10 +136,14 @@ export function GallerySection() {
               src={galleryImages[2].src}
               alt={galleryImages[2].alt}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               sizes="(min-width: 1024px) 50vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#005096]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">
+              <p className="text-white font-semibold text-sm mb-4">
+                {galleryImages[2].alt}
+              </p>
+            </div>
           </motion.div>
 
           {/* 4. Baixo Direita (2 imagens lado a lado) */}
@@ -141,7 +153,7 @@ export function GallerySection() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="group relative aspect-[3/4] overflow-hidden rounded-xl bg-[#005096]/5 lg:aspect-square"
+              className="group relative aspect-3/4 overflow-hidden rounded-xl bg-[#005096]/5 lg:aspect-auto"
             >
               <Image
                 src={galleryImages[3].src}
@@ -150,13 +162,18 @@ export function GallerySection() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(min-width: 1024px) 25vw, 25vw"
               />
+              <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">
+                <p className="text-white font-semibold text-sm mb-4">
+                  {galleryImages[3].alt}
+                </p>
+              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="group relative aspect-[3/4] overflow-hidden rounded-xl bg-[#005096]/5 lg:aspect-square"
+              className="group relative aspect-3/4 overflow-hidden rounded-xl bg-[#005096]/5 lg:aspect-auto"
             >
               <Image
                 src={galleryImages[4].src}
@@ -165,6 +182,11 @@ export function GallerySection() {
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(min-width: 1024px) 25vw, 25vw"
               />
+              <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">
+                <p className="text-white font-semibold text-sm mb-4">
+                  {galleryImages[4].alt}
+                </p>
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -177,13 +199,19 @@ export function GallerySection() {
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <button className="group flex items-center gap-3 rounded-xl bg-[#01B6F5] px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-[#00a3dc] hover:shadow-lg hover:shadow-[#01B6F5]/40 sm:text-lg">
+          <a
+            href="https://www.instagram.com/camv_supervolei/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="hover:scale-105 cursor-pointer group gap-3 min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
+          >
             <Camera className="h-5 w-5 transition-transform group-hover:scale-110 sm:h-6 sm:w-6" />
-            <span>Veja Mais Momentos</span>
-          </button>
+            <span className="uppercase font-bold lg:text-lg">
+              Veja Mais Momentos
+            </span>
+          </a>
         </motion.div>
       </div>
     </section>
   );
 }
-

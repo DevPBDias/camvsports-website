@@ -10,27 +10,21 @@ const montserrat = Montserrat({
 
 const erbaumBlack = localFont({
   src: "../assets/fonts/Erbaum-Black.ttf",
-  variable: "--font-erbaum-heading",
-  weight: "900",
-  style: "normal",
-  display: "swap",
+  variable: "--font-erbaum-black", // Mudei aqui
 });
 
-export const metadata: Metadata = {
-  title: "Camv Sports | Em Construção",
-  description:
-    "Estamos preparando algo incrível. O futuro do esporte está chegando.",
-};
+const erbaumRegular = localFont({
+  src: "../assets/fonts/Erbaum-Regular.ttf",
+  variable: "--font-erbaum-regular", // Mudei aqui
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
       <body
-        className={`${montserrat.variable} ${erbaumBlack.variable} antialiased`}
+        className={`${montserrat.variable} ${erbaumBlack.variable} ${erbaumRegular.variable} antialiased`}
       >
         {children}
       </body>

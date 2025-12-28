@@ -8,6 +8,7 @@ import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
 import { motion } from "framer-motion";
 
 const NAV_LINKS = [
+  { label: "início", href: "#hero" },
   { label: "PROJETO", href: "#historia" },
   { label: "COMISSÃO TÉCNICA", href: "#comissao-tecnica" },
   { label: "CONQUISTAS", href: "#conquistas" },
@@ -56,13 +57,13 @@ export function Header() {
             priority
           />
         </div>
-        <span className="hidden text-sm font-semibold tracking-[0.18em] uppercase sm:block">
+        <span className="hidden font-heading text-sm font-semibold tracking-[0.18em] uppercase sm:block">
           CAMV <br /> Sports
         </span>
       </div>
 
       {/* Navegação desktop */}
-      <nav className="hidden items-center gap-4 xl:gap-6 text-xs font-medium uppercase tracking-[0.18em] lg:flex">
+      <nav className="hidden items-center font-sans gap-4 xl:gap-6 text-xs font-medium uppercase tracking-[0.18em] lg:flex">
         {NAV_LINKS.map((link) => (
           <a
             key={link.href}

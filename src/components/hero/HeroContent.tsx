@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDownCircleIcon, Instagram } from "lucide-react";
+import { ArrowDownCircleIcon } from "lucide-react";
 
 export function HeroContent() {
   return (
@@ -10,7 +10,7 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="max-w-7xl text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px]"
+          className="max-w-7xl text-3xl font-extrabold xl:leading-20 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px]"
         >
           Transformando vidas e construindo{" "}
           <span className="text-accent text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[85px] font-heading tracking-wider">
@@ -23,7 +23,7 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
-          className="mt-4 max-w-5xl text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-accent font-medium sm:text-base lg:mt-6"
+          className="mt-4 max-w-5xl text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl text-accent font-medium sm:text-base lg:mt-8"
         >
           O CAMV Sports é um projeto de alto rendimento e formação esportiva que
           compete nos principais campeonatos do Brasil.
@@ -34,7 +34,7 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
-          className="mt-6 px-3 flex w-full flex-col gap-3 sm:px-0 sm:flex-row sm:justify-center uppercase font-bold"
+          className="mt-10 px-3 flex w-full flex-col gap-3 sm:px-0 lg:gap-6 sm:flex-row sm:justify-center uppercase font-bold"
         >
           <a
             href="#projeto"
@@ -55,7 +55,7 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
-          className="absolute bottom-8 md:bottom-12 lg:bottom-16 xl:bottom-20 2xl:bottom-24 flex items-center gap-2 px-4 py-2 text-xs font-medium transition hover:text-accent"
+          className="absolute bottom-18 md:bottom-28 lg:bottom-32 xl:bottom-36 2xl:bottom-52 flex items-center gap-2 px-4 py-2 text-xs font-medium transition hover:text-accent"
         >
           <ArrowDownCircleIcon className="animate-bounce w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
         </motion.button>

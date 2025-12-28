@@ -7,7 +7,10 @@ import { HeroNet } from "./HeroNet";
 
 export function Hero() {
   return (
-    <div className="relative h-dvh w-full overflow-hidden bg-background text-white">
+    <section
+      id="hero"
+      className="relative h-dvh w-full overflow-hidden bg-background text-white"
+    >
       <HeroBackground />
       <Header />
 
@@ -18,6 +21,6 @@ export function Hero() {
         <HeroContent />
         <HeroNet />
       </main>
-    </div>
+    </section>
   );
 }

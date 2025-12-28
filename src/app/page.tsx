@@ -6,6 +6,8 @@ import { TechnicalTeamSection } from "@/components/technical/TechnicalTeam";
 import { CalendarSection } from "@/components/calendar/CalendarSection";
 import { SponsorsSection } from "@/components/sponsors/SponsorsSection";
 import { GallerySection } from "@/components/gallery/GallerySection";
+import { ResultsSection } from "@/components/results/ResultsSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -15,9 +17,11 @@ export default function Home() {
       <HistoryTeamSection />
       <HistoryCoachSection />
       <TechnicalTeamSection />
+      <ResultsSection />
       <CalendarSection />
       <SponsorsSection />
       <GallerySection />
+      <Footer />
     </main>
   );
 }
