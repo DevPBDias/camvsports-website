@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="w-full flex flex-col items-center justify-center pb-12">
       <VolleyNet />
       <div className="flex flex-col gap-7 md:gap-10 lg:gap-14 xl:gap-20 w-full text-center max-w-4xl text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mt-12">
-        <p className="uppercase font-sans font-bold">
+        <p className="uppercase font-heading font-bold">
           Faça parte desse projeto{" "}
           <span className="text-accent text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading tracking-wider">
             vencedor
