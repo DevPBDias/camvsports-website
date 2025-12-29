@@ -1,20 +1,18 @@
 import Image from "next/image";
-import playerScreaming from "@/assets/images/player_screaming.png";
+import bg_woman_results from "@/assets/images/bg_woman_results.png";
 
-export function ResultsSideImage() {
+export function ResultsSideImage({ side }: { side: string }) {
   return (
-    <div className="hidden lg:block relative min-h-screen">
+    <div className={`w-1/5 hidden lg:block absolute z-10 ${side} h-full`}>
       <Image
-        src={playerScreaming}
+        src={bg_woman_results}
         alt="Jogador comemorando"
         fill
         className="object-cover"
         sizes="20vw"
         priority
       />
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
     </div>
   );
 }
-
-
