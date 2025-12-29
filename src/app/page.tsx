@@ -2,7 +2,6 @@ import { Hero } from "@/components/hero";
 import { StatsSection } from "@/components/stats";
 import { HistoryTeamSection, HistoryCoachSection } from "@/components/history";
 import { TechnicalTeamSection } from "@/components/technical";
-import { CalendarSection } from "@/components/calendar";
 import { SponsorsSection } from "@/components/sponsors";
 import { GallerySection } from "@/components/gallery";
 import { ResultsSection } from "@/components/results";
@@ -17,7 +16,6 @@ export default function Home() {
       <HistoryCoachSection />
       <TechnicalTeamSection />
       <ResultsSection />
-      <CalendarSection />
       <SponsorsSection />
       <GallerySection />
       <Footer />

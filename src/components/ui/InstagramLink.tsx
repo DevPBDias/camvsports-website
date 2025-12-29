@@ -28,6 +28,7 @@ export function InstagramLink({
       href={url}
       target="_blank"
       rel="noreferrer"
+      aria-label={`Seguir CAMV Sports no Instagram: @${username}`}
       className={`${variantStyles[variant]} ${className}`}
     >
       <Instagram size={18} />

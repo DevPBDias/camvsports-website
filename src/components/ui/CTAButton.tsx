@@ -23,7 +23,7 @@ export function CTAButton({
   className = "",
 }: CTAButtonProps) {
   const baseStyles =
-    "hover:scale-105 cursor-pointer group gap-3 min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl px-6 py-2 text-sm text-white shadow-lg transition hover:translate-y-px";
+    "hover:scale-105 cursor-pointer group gap-3 min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl px-6 py-3 lg:py-2 text-sm text-white font-bold shadow-lg transition hover:translate-y-px";
 
   const variantStyles = {
     primary: "bg-accent shadow-accent/40 hover:bg-accent/80",

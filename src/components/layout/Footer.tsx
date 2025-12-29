@@ -48,13 +48,12 @@ const Footer = () => {
           href="#hero"
           className="flex items-center gap-3 hover:scale-105 transition-all duration-300"
         >
-          <div className="relative h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24">
+          <div className="relative h-14 w-14 md:h-18 md:w-18 lg:h-20 lg:w-20">
             <Image
               src={heroLogo}
               alt="Logo CAMV Sports"
               fill
-              className="object-contain drop-shadow-lg"
-              sizes="48px"
+              className="object-cover"
               priority
             />
           </div>

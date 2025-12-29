@@ -32,7 +32,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-4 sm:px-8 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-4 sm:px-8 lg:px-12 xl:px-16 transition-all duration-300 ${
         isScrolled
           ? "bg-[#005096]/95 shadow-lg backdrop-blur-md"
           : "bg-transparent"
@@ -58,13 +58,13 @@ export function Header() {
       </a>
 
       {/* Navegação desktop */}
-      <nav className="hidden items-center font-sans gap-4 xl:gap-6 text-xs font-medium uppercase tracking-[0.18em] lg:flex">
+      <nav className="hidden items-center font-sans gap-3 lg:gap-4 xl:gap-5 text-xs font-medium uppercase tracking-[0.15em] lg:flex">
         {NAV_LINKS.map((link) => (
           <a
             key={link.href}
             href={link.href}
             onClick={handleNavigate}
-            className="transition hover:text-[#01B6F5]"
+            className="transition hover:text-[#01B6F5] whitespace-nowrap"
           >
             {link.label}
           </a>

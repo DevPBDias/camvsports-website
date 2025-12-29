@@ -110,9 +110,10 @@ export function ResultsCarousel() {
           <button
             key={index}
             onClick={() => api?.scrollTo(index)}
+            aria-label={`Ir para o slide ${index + 1}`}
             className={cn(
-              "h-2 w-2 rounded-full transition-colors",
-              current === index ? "bg-primary" : "bg-background/40"
+              "h-2.5 w-2.5 rounded-full transition-colors",
+              current === index ? "bg-primary" : "bg-background/60"
             )}
           />
         ))}

@@ -56,7 +56,7 @@ export function CalendarSection() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="mx-auto max-w-6xl text-center"
         >
-          <p className="text-sm text-left font-medium lg:text-center leading-relaxed text-[#1E1E1E]/80 sm:text-base lg:text-lg">
+          <p className="text-sm font-medium leading-relaxed text-[#1E1E1E]/80 sm:text-base lg:text-lg">
             Investir no nosso projeto de voleibol é ter sua marca atrelada a uma
             equipe que não só participa, mas domina competições. Em 2024,
             disputamos 40 campeonatos e subimos ao pódio em 37 deles, garantindo
@@ -72,7 +72,7 @@ export function CalendarSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5 lg:gap-6"
+          className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 xl:gap-6"
         >
           {calendar_tournaments.map((item) => (
             <div

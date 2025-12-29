@@ -28,7 +28,7 @@ export function HistoryCoachSection() {
         </div>
 
         {/* Coluna texto (direita) */}
-        <div className="flex w-full flex-col gap-5 px-5 py-10 lg:px-8 lg:py-12 xl:px-12 xl:py-16 2xl:px-24 lg:justify-center text-muted lg:min-h-[600px]">
+        <div className="flex w-full flex-col gap-5 px-6 py-10 lg:px-16 lg:py-12 xl:px-20 xl:py-16 2xl:px-32 lg:justify-center text-muted lg:min-h-[600px]">
           <SectionTitle variant="dark" className="text-left" delay={0}>
             JEIDE RUDGERI
           </SectionTitle>
