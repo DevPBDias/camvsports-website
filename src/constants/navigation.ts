@@ -1,5 +1,4 @@
 export const NAV_LINKS = [
-  { label: "início", href: "#hero" },
   { label: "PROJETO", href: "#historia" },
   { label: "COMISSÃO TÉCNICA", href: "#comissao-tecnica" },
   { label: "CONQUISTAS", href: "#conquistas" },

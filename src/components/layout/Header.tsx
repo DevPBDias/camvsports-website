@@ -38,7 +38,10 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="flex items-center gap-3">
+      <a
+        href="#hero"
+        className="flex items-center gap-3 hover:scale-105 transition duration-300"
+      >
         <div className="relative h-10 w-10 sm:h-12 sm:w-12">
           <Image
             src={heroLogo}
@@ -52,7 +55,7 @@ export function Header() {
         <span className="hidden font-heading text-sm font-semibold tracking-[0.08em] uppercase sm:block leading-none">
           CAMV <br /> Sports
         </span>
-      </div>
+      </a>
 
       {/* Navegação desktop */}
       <nav className="hidden items-center font-sans gap-4 xl:gap-6 text-xs font-medium uppercase tracking-[0.18em] lg:flex">
@@ -75,7 +78,7 @@ export function Header() {
         transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
         className="lg:flex items-center gap-3 text-xs text-white/70 hidden"
       >
-        <InstagramLink variant="header" showUsername />
+        <InstagramLink variant="header" showUsername={false} />
       </motion.div>
 
       {/* Botão burger (mobile/tablet) */}

@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import logo_hmsports from "@/assets/icons-logo/logo_hmsports.png";
+import logo_omni from "@/assets/icons-logo/logo_omni.png";
 import logo_evolua from "@/assets/icons-logo/logo_evolua.png";
 import logo_humanizart from "@/assets/icons-logo/logo_humanizart.png";
 import logo_kaizen from "@/assets/icons-logo/logo_kaizen.webp";
@@ -15,8 +15,8 @@ export type ISponsors = {
 export const sponsors: ISponsors[] = [
   {
     id: 1,
-    sponsor_name: "HM Sports Brasil",
-    logo: logo_hmsports,
+    sponsor_name: "Centro Educacional Omni",
+    logo: logo_omni,
   },
   {
     id: 2,

@@ -44,7 +44,10 @@ const Footer = () => {
       <div className="h-px w-4/5 max-w-7xl px-4 bg-white/40 mt-28 mb-12" />
 
       <div className="w-full max-w-7xl px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:justify-between">
-        <div className="flex items-center gap-3">
+        <a
+          href="#hero"
+          className="flex items-center gap-3 hover:scale-105 transition-all duration-300"
+        >
           <div className="relative h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24">
             <Image
               src={heroLogo}
@@ -58,7 +61,7 @@ const Footer = () => {
           <span className="font-heading text-base font-semibold tracking-[0.08em] uppercase sm:block lg:text-lg xl:text-xl 2xl:text-2xl leading-none">
             CAMV <br /> Sports
           </span>
-        </div>
+        </a>
         <p className="text-foreground/70 font-sans text-sm text-left lg:text-center">
           Rua X, Qd. XX, Setor Xxxxxxx, N° XXXX <br /> Goiânia - Goiás • CEP:
           70000-000
