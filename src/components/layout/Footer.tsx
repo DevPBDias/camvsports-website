@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowUpRight, Instagram } from "lucide-react";
-import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+
+import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
 import { VolleyNet } from "./VolleyNet";
+import { InstagramLink } from "@/components/ui/InstagramLink";
+import { CTAButton } from "@/components/ui/CTAButton";
+import { SOCIAL_LINKS } from "@/constants/social";
 
 const Footer = () => {
   return (
@@ -26,17 +30,14 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <a
-            href="https://www.instagram.com/camv_supervolei/"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="hover:scale-105 cursor-pointer group gap-3 min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
+          <CTAButton
+            href={SOCIAL_LINKS.instagram.url}
+            icon={ArrowUpRight}
+            iconPosition="right"
+            external
           >
-            <span className="uppercase font-bold lg:text-lg">
-              Junte-se conosco
-            </span>
-            <ArrowUpRight className="h-5 w-5 transition-transform group-hover:scale-110 sm:h-6 sm:w-6" />
-          </a>
+            Junte-se conosco
+          </CTAButton>
         </motion.div>
       </div>
 
@@ -68,20 +69,13 @@ const Footer = () => {
           transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
           className="lg:flex items-center gap-3 text-xs text-white/70"
         >
-          <a
-            href="https://www.instagram.com/camv_supervolei/"
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-2 rounded-full bg-transparent p-4 text-sm font-medium border border-foreground/40 transition-all hover:bg-muted/10 hover:scale-105"
-          >
-            <Instagram size={18} />
-          </a>
+          <InstagramLink variant="footer" showUsername={false} />
         </motion.div>
       </div>
 
       <div className="w-full max-w-3xl px-4 lg:px-16 text-center text-foreground/60 text-xs mt-6">
         © 2026 <span className="text-white font-bold">CAMV SPORTS</span> • Todos
-        direisto reservados <br />
+        direitos reservados <br />
         Desenvolvido por{" "}
         <a
           href="https://portfolio-v-final-plum.vercel.app/"

@@ -2,9 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+
 import logo from "@/assets/icons-logo/Logo CAMV Sports.png";
 import { CalendarBackground } from "./CalendarBackground";
 import { calendar_tournaments } from "@/constants/calendar_tournaments";
+import { SectionTag } from "@/components/ui/SectionTag";
 
 const mainCompetitions = [
   "CBI - Campeonato Brasileiro Interclubes",
@@ -22,20 +24,7 @@ export function CalendarSection() {
       <CalendarBackground />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 sm:px-6 lg:px-8">
-        {/* Tag */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex justify-center"
-        >
-          <div className="rounded-lg bg-[#005096] px-6 py-2">
-            <span className="text-xs font-black uppercase tracking-[0.18em] text-white font-heading">
-              Nosso Calendário
-            </span>
-          </div>
-        </motion.div>
+        <SectionTag text="Nosso Calendário" />
 
         {/* Logo e Título */}
         <motion.div
@@ -118,7 +107,7 @@ export function CalendarSection() {
             {mainCompetitions.map((competition) => (
               <span
                 key={competition}
-                className="rounded-lg bg-[#005096]/10 px-4 py-2 text-sm font-semibold text-[#005096] sm:text- lg:text-lg"
+                className="rounded-lg bg-[#005096]/10 px-4 py-2 text-sm font-semibold text-[#005096] sm:text-base lg:text-lg"
               >
                 {competition}
               </span>

@@ -2,8 +2,12 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { sponsors } from "@/constants/sponsors";
 import Image from "next/image";
+
+import { sponsors } from "@/constants/sponsors";
+import { SectionTag } from "@/components/ui/SectionTag";
+import { SectionTitle } from "@/components/ui/SectionTitle";
+import { SOCIAL_LINKS } from "@/constants/social";
 
 export function SponsorsSection() {
   return (
@@ -15,35 +19,13 @@ export function SponsorsSection() {
       }}
     >
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-10 px-5 sm:px-6 lg:px-8">
-        {/* Tag */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex justify-center"
-        >
-          <div className="rounded-lg bg-white px-6 py-2">
-            <span className="text-xs font-black uppercase tracking-[0.18em] text-[#005096] font-heading">
-              Nossos Patrocinadores
-            </span>
-          </div>
-        </motion.div>
+        <SectionTag text="Nossos Patrocinadores" variant="secondary" />
 
-        {/* Título */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-          className="flex flex-col items-center gap-2 text-center"
-        >
-          <h2 className="font-heading text-3xl font-black uppercase tracking-wide text-white sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl">
-            Parceiros que confiam no <br /> nosso Projeto
-          </h2>
-        </motion.div>
+        <SectionTitle variant="light">
+          Parceiros que confiam no <br /> nosso Projeto
+        </SectionTitle>
 
-        {/* Grid de patrocinadores - Layout customizado */}
+        {/* Grid de patrocinadores */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +33,7 @@ export function SponsorsSection() {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 max-w-5xl mx-auto"
         >
-          {/* Segunda linha: 2 patrocinadores (2 colunas no mobile, 2 colunas cada no desktop) */}
+          {/* Principais patrocinadores (2 colunas cada) */}
           {sponsors.slice(0, 2).map((sponsor, index) => (
             <motion.div
               key={sponsor.id}
@@ -82,7 +64,7 @@ export function SponsorsSection() {
             </motion.div>
           ))}
 
-          {/* Terceira linha: 4 patrocinadores (2 colunas no mobile, 1 coluna cada no desktop) */}
+          {/* Demais patrocinadores (1 coluna cada) */}
           {sponsors.slice(2, 6).map((sponsor, index) => (
             <motion.div
               key={sponsor.id}
@@ -124,7 +106,7 @@ export function SponsorsSection() {
             delay: 0.6 + sponsors.length * 0.05,
             ease: "easeOut",
           }}
-          href="https://www.instagram.com/camv_supervolei/"
+          href={SOCIAL_LINKS.instagram.url}
           target="_blank"
           rel="noreferrer noopener"
           className="hover:scale-105 w-full max-w-4xl mx-auto flex flex-row gap-3 sm:gap-4 items-center justify-center rounded-xl border-2 border-dashed border-white/50 bg-white/5 p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:border-white hover:bg-white/10"

@@ -2,20 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Instagram, Menu, X } from "lucide-react";
-
-import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
-const NAV_LINKS = [
-  { label: "início", href: "#hero" },
-  { label: "PROJETO", href: "#historia" },
-  { label: "COMISSÃO TÉCNICA", href: "#comissao-tecnica" },
-  { label: "CONQUISTAS", href: "#conquistas" },
-  { label: "CALENDÁRIO", href: "#calendario" },
-  { label: "PATROCÍNIOS", href: "#patrocinios" },
-  { label: "GALERIA", href: "#galeria" },
-];
+import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
+import { NAV_LINKS } from "@/constants/navigation";
+import { InstagramLink } from "@/components/ui/InstagramLink";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,22 +68,14 @@ export function Header() {
         ))}
       </nav>
 
-      {/* Social - focando no Instagram por enquanto */}
+      {/* Social - Instagram */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
         className="lg:flex items-center gap-3 text-xs text-white/70 hidden"
       >
-        <a
-          href="https://www.instagram.com/camv_supervolei/"
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center gap-2 rounded-xl bg-black/30 px-4 py-2 text-sm font-medium shadow-md backdrop-blur-md transition hover:bg-black/50"
-        >
-          <Instagram size={18} />
-          <span className="hidden xl:flex">@camv_supervolei</span>
-        </a>
+        <InstagramLink variant="header" showUsername />
       </motion.div>
 
       {/* Botão burger (mobile/tablet) */}
