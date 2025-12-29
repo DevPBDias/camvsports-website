@@ -49,7 +49,7 @@ export function Header() {
             priority
           />
         </div>
-        <span className="hidden font-heading text-sm font-semibold tracking-[0.18em] uppercase sm:block">
+        <span className="hidden font-heading text-sm font-semibold tracking-[0.08em] uppercase sm:block leading-none">
           CAMV <br /> Sports
         </span>
       </div>

@@ -45,7 +45,7 @@ const Footer = () => {
 
       <div className="w-full max-w-7xl px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:justify-between">
         <div className="flex items-center gap-3">
-          <div className="relative h-10 w-10 md:h-12 md:w-12 lg:h-16 lg:w-16">
+          <div className="relative h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24">
             <Image
               src={heroLogo}
               alt="Logo CAMV Sports"
@@ -55,7 +55,7 @@ const Footer = () => {
               priority
             />
           </div>
-          <span className="font-heading text-sm font-semibold tracking-[0.18em] uppercase sm:block lg:text-base">
+          <span className="font-heading text-base font-semibold tracking-[0.08em] uppercase sm:block lg:text-lg xl:text-xl 2xl:text-2xl leading-none">
             CAMV <br /> Sports
           </span>
         </div>
