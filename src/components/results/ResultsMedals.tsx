@@ -1,6 +1,3 @@
-import Image from "next/image";
-import medals from "@/assets/images/medals.png";
-
 const medalsValue = [
   {
     id: 1,
@@ -21,46 +18,33 @@ const medalsValue = [
 
 export function ResultsMedals() {
   return (
-    <div className="absolute z-20 w-full px-[10%] top-0 flex justify-center items-center">
-      <Image
-        src={medals}
-        alt="Medalhas do CAMV Sports"
-        className="w-full h-auto object-cover"
-        priority
-      />
-
-      <div
-        key={medalsValue[0].id}
-        className="absolute z-30 top-[40%] flex flex-col items-center"
-      >
-        <span className="text-4xl 2xl:text-[200px] font-heading text-white">
-          {medalsValue[0].quantity}
-        </span>
-        <span className="text-5xl uppercase font-heading text-white -mt-6">
-          {medalsValue[0].text}
-        </span>
-      </div>
-
-      <div
-        key={medalsValue[1].id}
-        className="absolute z-30 top-[20%] left-1/4 flex flex-col items-center"
-      >
-        <span className="text-4xl xl:text-[150px] font-heading font-bold text-white">
+    <div className="flex w-full justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
+      {/* Prata */}
+      <div className="flex flex-col items-center bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 xl:px-10 xl:py-6">
+        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-heading text-white">
           {medalsValue[1].quantity}
         </span>
-        <span className="text-4xl font-heading uppercase text-white -mt-6">
+        <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl uppercase font-heading text-white">
           {medalsValue[1].text}
         </span>
       </div>
 
-      <div
-        key={medalsValue[2].id}
-        className="absolute z-30 top-[20%] right-1/4 flex flex-col items-center"
-      >
-        <span className="text-4xl xl:text-[150px] font-heading font-bold text-white">
+      {/* Ouro */}
+      <div className="flex flex-col items-center bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 xl:px-10 xl:py-6">
+        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-heading text-white">
+          {medalsValue[0].quantity}
+        </span>
+        <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl uppercase font-heading text-white">
+          {medalsValue[0].text}
+        </span>
+      </div>
+
+      {/* Bronze */}
+      <div className="flex flex-col items-center bg-background/90 backdrop-blur-sm rounded-lg px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-4 lg:px-8 lg:py-5 xl:px-10 xl:py-6">
+        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-heading text-white">
           {medalsValue[2].quantity}
         </span>
-        <span className="text-4xl font-heading uppercase text-white -mt-6">
+        <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl uppercase font-heading text-white">
           {medalsValue[2].text}
         </span>
       </div>

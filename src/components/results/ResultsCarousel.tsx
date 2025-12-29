@@ -42,7 +42,7 @@ function TournamentsBlock({
   );
 }
 
-export function AchievementsSlider() {
+export function ResultsCarousel() {
   const [api, setApi] = React.useState<any>(null);
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -59,7 +59,7 @@ export function AchievementsSlider() {
   }, [api]);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full lg:px-8 ">
       <Carousel
         setApi={setApi}
         className="relative w-full max-w-3xl mx-auto"
@@ -73,8 +73,8 @@ export function AchievementsSlider() {
               key={achievement.id}
               className="basis-full flex justify-center"
             >
-              <div className="w-full max-w-xl rounded-xl border p-6 space-y-4 bg-background">
-                <h3 className="font-heading text-3xl uppercase w-full text-center">
+              <div className="w-full max-w-xl rounded-xl border p-4 sm:p-5 md:p-6 space-y-3 sm:space-y-4 bg-background shadow-lg">
+                <h3 className="font-heading text-2xl sm:text-3xl uppercase w-full text-center">
                   {medalLabel[achievement.medal_type]}
                 </h3>
 
@@ -112,7 +112,7 @@ export function AchievementsSlider() {
             onClick={() => api?.scrollTo(index)}
             className={cn(
               "h-2 w-2 rounded-full transition-colors",
-              current === index ? "bg-primary" : "bg-muted-foreground/30"
+              current === index ? "bg-primary" : "bg-background/40"
             )}
           />
         ))}

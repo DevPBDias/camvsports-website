@@ -12,7 +12,7 @@ export function ResultsSideImage({ side }: { side: string }) {
         sizes="20vw"
         priority
       />
-      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-background/80" />
     </div>
   );
 }
