@@ -4,44 +4,10 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Camera } from "lucide-react";
 
-import heroTeamPhoto from "@/assets/images/gallery_prizes.png";
-import projectTeamPhoto from "@/assets/images/project_team.png";
-import projectCoachPhoto from "@/assets/images/project_coach.png";
-import manTeamPhoto from "@/assets/images/man_team.png";
-import womenTeamPhoto from "@/assets/images/women_team.png";
-
 import { SectionTag } from "@/components/ui/SectionTag";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { CTAButton } from "@/components/ui/CTAButton";
-import { SOCIAL_LINKS } from "@/constants/social";
-
-const galleryImages = [
-  {
-    id: 1,
-    src: heroTeamPhoto,
-    alt: "Equipe CAMV Sports com troféus",
-  },
-  {
-    id: 2,
-    src: manTeamPhoto,
-    alt: "Equipe masculina CAMV Sports",
-  },
-  {
-    id: 3,
-    src: projectCoachPhoto,
-    alt: "Treinadora da CAMV Sports",
-  },
-  {
-    id: 4,
-    src: projectTeamPhoto,
-    alt: "Equipe feminina CAMV Sports",
-  },
-  {
-    id: 5,
-    src: womenTeamPhoto,
-    alt: "Equipe feminina CAMV Sports",
-  },
-];
+import { SOCIAL_LINKS, GALLERY_IMAGES } from "@/constants";
 
 export function GallerySection() {
   return (
@@ -57,7 +23,6 @@ export function GallerySection() {
           Nossa História
         </SectionTitle>
 
-        {/* Grid de imagens - layout 2x2 com alturas fixas */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +31,7 @@ export function GallerySection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6"
         >
           {/* Primeiras 3 imagens */}
-          {galleryImages.slice(0, 3).map((image, index) => (
+          {GALLERY_IMAGES.slice(0, 3).map((image, index) => (
             <motion.div
               key={image.id}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -92,7 +57,7 @@ export function GallerySection() {
 
           {/* 4º item (2 imagens lado a lado) */}
           <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80">
-            {galleryImages.slice(3, 5).map((image, index) => (
+            {GALLERY_IMAGES.slice(3, 5).map((image, index) => (
               <motion.div
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -118,7 +83,6 @@ export function GallerySection() {
           </div>
         </motion.div>
 
-        {/* Botão CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

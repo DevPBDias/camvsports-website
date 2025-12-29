@@ -3,24 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Divider } from "./Divider";
-
-const stats = [
-  {
-    value: 50,
-    suffix: "+",
-    labelTop: "TÍTULOS  VENCIDOS",
-  },
-  {
-    value: 7,
-    suffix: "+",
-    labelTop: "ANOS DE VIDA",
-  },
-  {
-    value: 100,
-    suffix: "+",
-    labelTop: "TORNEIOS DISPUTADOS",
-  },
-];
+import { STATS_DATA } from "@/constants";
 
 type StatValueProps = {
   value: number;
@@ -70,7 +53,7 @@ export function StatsSection() {
       className="flex items-center justify-center bg-[#01B6F5] px-6 py-16 sm:px-8 sm:py-20"
     >
       <div className="flex w-full max-w-md flex-col items-center gap-10 sm:max-w-lg lg:max-w-3xl xl:max-w-5xl lg:flex-row lg:items-stretch lg:justify-center">
-        {stats.map((stat, index) => (
+        {STATS_DATA.map((stat, index) => (
           <div key={stat.labelTop} className="flex items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -88,7 +71,7 @@ export function StatsSection() {
               </p>
             </motion.div>
 
-            {index < stats.length - 1 && <Divider delay={index * 0.15} />}
+            {index < STATS_DATA.length - 1 && <Divider delay={index * 0.15} />}
           </div>
         ))}
       </div>

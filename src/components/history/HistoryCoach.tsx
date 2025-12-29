@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import coachPhoto from "@/assets/images/project_coach.png";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function HistoryCoachSection() {
   return (
@@ -28,10 +29,10 @@ export function HistoryCoachSection() {
 
         {/* Coluna texto (direita) */}
         <div className="flex w-full flex-col gap-5 px-5 py-10 lg:px-8 lg:py-12 xl:px-12 xl:py-16 2xl:px-24 lg:justify-center text-muted lg:min-h-[600px]">
-          <h2 className="font-heading text-3xl font-black uppercase tracking-wide text-background md:text-4xl lg:text-5xl xl:text-6xl">
+          <SectionTitle variant="dark" className="text-left" delay={0}>
             JEIDE RUDGERI
-          </h2>
-          <p className="-mt-5 text-sm font-semibold uppercase tracking-[0.22em] text-background lg:text-sm xl:text-base 2xl:text-lg">
+          </SectionTitle>
+          <p className="-mt-5 text-sm font-semibold uppercase tracking-[0.22em] text-background/90 lg:text-sm xl:text-base 2xl:text-lg">
             Fundadora e Gestora do CAMV Sports
           </p>
 
@@ -72,8 +73,8 @@ export function HistoryCoachSection() {
             <li>&gt; Técnica Seleção Goiana Sub-16 & Sub-18 - 2025/26</li>
           </ul>
         </div>
-        {/* Coluna imagem da treinadora (esquerda) */}
-        <div className="lg:hidden relative h-80 w-full overflow-hidden md:h-full lg:min-h-[600px]">
+        {/* Coluna imagem da treinadora (esquerda) - Mobile */}
+        <div className="lg:hidden relative h-80 w-full overflow-hidden md:h-96">
           <Image
             src={coachPhoto}
             alt="Jeide Rudgeri, treinadora do CAMV Sports"
