@@ -14,8 +14,8 @@ const Footer = () => {
   return (
     <footer className="w-full flex flex-col items-center justify-center pb-12">
       <VolleyNet />
-      <div className="flex flex-col gap-7 md:gap-10 lg:gap-14 xl:gap-20 w-full text-center max-w-4xl text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mt-12">
-        <p className="uppercase font-heading font-bold">
+      <div className="flex flex-col gap-7 md:gap-10 md:px-4 lg:gap-10 xl:gap-8 w-full text-center max-w-4xl text-4xl sm:text-5xl lg:text-6xl xl:text-7xl mt-28">
+        <p className="uppercase font-heading font-bold flex flex-wrap md:block items-center justify-center px-10 md:px-2">
           Faça parte desse projeto{" "}
           <span className="text-accent text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading tracking-wider">
             vencedor
@@ -41,7 +41,7 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      <div className="h-px w-4/5 max-w-7xl px-4 bg-white/40 my-12" />
+      <div className="h-px w-4/5 max-w-7xl px-4 bg-white/40 mt-28 mb-12" />
 
       <div className="w-full max-w-7xl px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:justify-between">
         <div className="flex items-center gap-3">
