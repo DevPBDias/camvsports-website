@@ -2,6 +2,8 @@
 
 <div align="center">
 
+<img src="public/Logo CAMV Sports.png" alt="Logo CAMV Sports" width="120" />
+
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.0-black?style=for-the-badge&logo=next.js)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
@@ -10,7 +12,7 @@
 
 Website institucional moderno e responsivo para o projeto esportivo **CAMV Sports**, desenvolvido com as melhores práticas de desenvolvimento front-end.
 
-[🌐 Demo ao Vivo](#) • [📸 Screenshots](#-screenshots) • [🚀 Começando](#-começando)
+[🌐 Demo ao Vivo](https://camvsports.com) • [📸 Screenshots](#-screenshots) • [🚀 Começando](#-começando)
 
 </div>
 
@@ -35,9 +37,9 @@ O **CAMV Sports** (Centro de Atividades Mais Vôlei) é um projeto de alto rendi
 
 <div align="center">
 
-| Desktop                                                                         | Mobile                                                                        |
-| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![Desktop](https://via.placeholder.com/400x250/005096/FFFFFF?text=Desktop+View) | ![Mobile](https://via.placeholder.com/200x350/005096/FFFFFF?text=Mobile+View) |
+| Desktop                                                         | Mobile                                                        |
+| --------------------------------------------------------------- | ------------------------------------------------------------- |
+| <img src="public/desktop.png" alt="Desktop View" width="500" /> | <img src="public/mobile.png" alt="Mobile View" width="200" /> |
 
 </div>
 
@@ -60,7 +62,6 @@ O **CAMV Sports** (Centro de Atividades Mais Vôlei) é um projeto de alto rendi
 
 - **[Framer Motion 12](https://www.framer.com/motion/)** - Animações declarativas
 - **[Lucide React](https://lucide.dev/)** - Ícones SVG
-- **[Embla Carousel](https://www.embla-carousel.com/)** - Carrossel performático
 
 ### Utilitários
 
@@ -211,51 +212,14 @@ O projeto utiliza os breakpoints padrão do Tailwind CSS:
 
 ---
 
-## 🔧 Configuração
-
-### Variáveis de Ambiente
-
-Crie um arquivo `.env.local` na raiz do projeto (se necessário):
-
-```env
-# Exemplo de variáveis (não utilizadas atualmente)
-NEXT_PUBLIC_SITE_URL=https://camvsports.com.br
-```
-
-### Customização
-
-- **Cores**: Edite `src/app/globals.css` (variáveis CSS)
-- **Navegação**: Edite `src/constants/navigation.ts`
-- **Redes Sociais**: Edite `src/constants/social.ts`
-- **Patrocinadores**: Edite `src/constants/sponsors.ts`
-
----
-
-## 📦 Deploy
-
-### Vercel (Recomendado)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/DevPBDias/camvsports-website)
-
-### Outras Plataformas
-
-O projeto pode ser deployado em qualquer plataforma que suporte Next.js:
-
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
-
----
-
-## 👨‍💻 Autor
+## ‍💻 Autor
 
 <div align="center">
 
 **Paulo Bruno Dias**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel)](https://portfolio-v-final-plum.vercel.app/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/devpbdias)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/devpaulobrunomdias/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/DevPBDias)
 
 </div>
