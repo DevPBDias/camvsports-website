@@ -37,13 +37,13 @@ export function HeroContent() {
           className="mt-10 px-3 flex w-full flex-col gap-3 sm:px-0 lg:gap-6 sm:flex-row sm:justify-center uppercase font-bold"
         >
           <a
-            href="#projeto"
+            href="#historia"
             className="min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
           >
             Conheça o projeto
           </a>
           <a
-            href="#patrocinadores"
+            href="#patrocinios"
             className="min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/5 px-6 py-3 text-sm text-white shadow-md backdrop-blur-md transition hover:bg-white/10"
           >
             Seja um patrocinador
