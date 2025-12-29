@@ -2,9 +2,12 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+
 import user from "@/assets/icons-logo/user.png";
 import { TechnicalBackground } from "./TechnicalBackground";
 import { technical_staff } from "@/constants/technical_staff";
+import { SectionTag } from "@/components/ui/SectionTag";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function TechnicalTeamSection() {
   return (
@@ -16,20 +19,7 @@ export function TechnicalTeamSection() {
       <TechnicalBackground />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center gap-8 px-5 sm:px-6 lg:px-8">
-        {/* Tag */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex justify-center"
-        >
-          <div className="rounded-lg bg-white px-6 py-2">
-            <span className="text-xs font-black uppercase tracking-[0.18em] text-background font-heading">
-              Nossa Comissão Técnica
-            </span>
-          </div>
-        </motion.div>
+        <SectionTag text="Nossa Comissão Técnica" variant="secondary" />
 
         {/* Título e subtítulo */}
         <motion.div
@@ -64,23 +54,13 @@ export function TechnicalTeamSection() {
             >
               {/* Foto circular */}
               <div className="relative mb-4 h-24 w-24 overflow-hidden rounded-full border-2 border-white/30 transition-all duration-300 group-hover:border-[#01B6F5] group-hover:scale-105 sm:h-28 sm:w-28 lg:h-32 lg:w-32">
-                {staff.image ? (
-                  <Image
-                    src={staff.image}
-                    alt={staff.name}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1024px) 128px, 112px"
-                  />
-                ) : (
-                  <Image
-                    src={user}
-                    alt={staff.name}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 1024px) 128px, 112px"
-                  />
-                )}
+                <Image
+                  src={staff.image || user}
+                  alt={staff.name}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 128px, 112px"
+                />
               </div>
 
               {/* Nome */}

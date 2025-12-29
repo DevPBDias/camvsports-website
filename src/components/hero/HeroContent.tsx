@@ -1,5 +1,8 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { ArrowDownCircleIcon } from "lucide-react";
+import { CTAButton } from "@/components/ui/CTAButton";
 
 export function HeroContent() {
   return (
@@ -34,31 +37,26 @@ export function HeroContent() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
-          className="mt-10 px-3 flex w-full flex-col gap-3 sm:px-0 lg:gap-6 sm:flex-row sm:justify-center uppercase font-bold"
+          className="mt-10 px-3 flex w-full flex-col gap-3 sm:px-0 lg:gap-6 sm:flex-row sm:justify-center"
         >
-          <a
-            href="#historia"
-            className="min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm text-white shadow-lg shadow-accent/40 transition hover:translate-y-px hover:bg-accent/80"
-          >
+          <CTAButton href="#historia" variant="primary">
             Conheça o projeto
-          </a>
-          <a
-            href="#patrocinios"
-            className="min-w-48 lg:min-w-64 2xl:min-w-80 inline-flex items-center justify-center rounded-xl border border-white/40 bg-white/5 px-6 py-3 text-sm text-white shadow-md backdrop-blur-md transition hover:bg-white/10"
-          >
+          </CTAButton>
+          <CTAButton href="#patrocinios" variant="secondary">
             Seja um patrocinador
-          </a>
+          </CTAButton>
         </motion.div>
 
         {/* Botão de scroll para baixo */}
-        <motion.button
+        <motion.a
+          href="#historia"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.6, ease: "easeOut" }}
           className="absolute bottom-18 md:bottom-28 lg:bottom-32 xl:bottom-36 2xl:bottom-52 flex items-center gap-2 px-4 py-2 text-xs font-medium transition hover:text-accent"
         >
           <ArrowDownCircleIcon className="animate-bounce w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );

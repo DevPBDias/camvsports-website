@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 import teamPhoto from "@/assets/images/project_team.png";
-import { TagSection } from "../layout/TagSection";
+import { SectionTag } from "@/components/ui/SectionTag";
 
 export function HistoryTeamSection() {
   return (
@@ -18,7 +19,8 @@ export function HistoryTeamSection() {
         <div className="h-full w-full flex flex-col lg:grid lg:grid-cols-2 lg:items-stretch">
           {/* Coluna texto: o projeto */}
           <div className="w-full flex flex-col justify-start items-start gap-5 px-5 lg:px-12 py-14 xl:px-20 2xl:px-24 lg:justify-center">
-            <TagSection tagTitle="Nossa história" />
+            <SectionTag text="Nossa história" className="justify-start" />
+
             <h2 className="font-heading text-3xl font-black uppercase tracking-wide text-background md:text-4xl lg:text-5xl xl:text-6xl">
               O PROJETO <br />
               CAMV SPORTS

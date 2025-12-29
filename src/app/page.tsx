@@ -1,13 +1,12 @@
-import { Hero } from "@/components/hero/Hero";
-import { StatsSection } from "@/components/stats/Stats";
-import { HistoryTeamSection } from "@/components/history/HistoryTeam";
-import { HistoryCoachSection } from "@/components/history/HistoryCoach";
-import { TechnicalTeamSection } from "@/components/technical/TechnicalTeam";
-import { CalendarSection } from "@/components/calendar/CalendarSection";
-import { SponsorsSection } from "@/components/sponsors/SponsorsSection";
-import { GallerySection } from "@/components/gallery/GallerySection";
-import { ResultsSection } from "@/components/results/ResultsSection";
-import Footer from "@/components/layout/Footer";
+import { Hero } from "@/components/hero";
+import { StatsSection } from "@/components/stats";
+import { HistoryTeamSection, HistoryCoachSection } from "@/components/history";
+import { TechnicalTeamSection } from "@/components/technical";
+import { CalendarSection } from "@/components/calendar";
+import { SponsorsSection } from "@/components/sponsors";
+import { GallerySection } from "@/components/gallery";
+import { ResultsSection } from "@/components/results";
+import { Footer } from "@/components/layout";
 
 export default function Home() {
   return (

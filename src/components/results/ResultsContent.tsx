@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ResultsMedals } from "./ResultsMedals";
 import { ResultsCarousel } from "./ResultsCarousel";
+import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function ResultsContent() {
   return (
@@ -33,6 +34,7 @@ export function ResultsContent() {
         >
           RESULTADOS DE 2025
         </motion.h2>
+
         <ResultsCarousel />
       </div>
     </>

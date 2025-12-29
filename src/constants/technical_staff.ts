@@ -32,12 +32,12 @@ export const technical_staff: ITechnicalStaff[] = [
   },
   {
     id: 5,
-    name: "Marco Tulio",
+    name: "Marco Túlio",
     role: "Social Media",
   },
   {
     id: 6,
-    name: "Katiuscia Marqueszin",
+    name: "Katiúscia Marqueszin",
     role: "Psicóloga",
   },
   {
