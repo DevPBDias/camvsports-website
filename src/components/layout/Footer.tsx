@@ -43,7 +43,7 @@ const Footer = () => {
 
       <div className="h-px w-4/5 max-w-7xl px-4 bg-white/40 mt-28 mb-12" />
 
-      <div className="w-full max-w-7xl px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:justify-between">
+      <div className="w-full max-w-6xl 2xl:max-w-7xl px-4 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:justify-between">
         <a
           href="#hero"
           className="flex items-center gap-3 hover:scale-105 transition-all duration-300"
@@ -62,10 +62,6 @@ const Footer = () => {
             CAMV <br /> Sports
           </span>
         </a>
-        <p className="text-foreground/70 font-sans text-sm text-left lg:text-center">
-          Rua X, Qd. XX, Setor Xxxxxxx, N° XXXX <br /> Goiânia - Goiás • CEP:
-          70000-000
-        </p>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

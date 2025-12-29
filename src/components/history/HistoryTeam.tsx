@@ -14,9 +14,9 @@ export function HistoryTeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
-        className="flex w-full lg:h-[90dvh] 2xl:h-[80dvh] flex-col items-start justify-start bg-white text-[#1E1E1E]"
+        className="flex w-full flex-col items-start justify-start bg-white text-[#1E1E1E]"
       >
-        <div className="h-full w-full flex flex-col lg:grid lg:grid-cols-2 lg:items-stretch">
+        <div className="h-full w-full flex flex-col lg:grid lg:grid-cols-2 lg:items-center">
           {/* Coluna texto: o projeto */}
           <div className="w-full flex flex-col justify-start items-start gap-5 px-5 lg:px-12 py-14 xl:px-20 2xl:px-24 lg:justify-center">
             <SectionTag text="Nossa história" className="justify-start" />
