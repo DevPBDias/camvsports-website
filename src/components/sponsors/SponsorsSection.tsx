@@ -106,7 +106,7 @@ export function SponsorsSection() {
             delay: 0.6 + sponsors.length * 0.05,
             ease: "easeOut",
           }}
-          href={SOCIAL_LINKS.instagram.url}
+          href={SOCIAL_LINKS.whatsapp.url}
           target="_blank"
           rel="noreferrer noopener"
           className="hover:scale-105 w-full max-w-4xl mx-auto flex flex-row gap-3 sm:gap-4 items-center justify-center rounded-xl border-2 border-dashed border-white/50 bg-white/5 p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:border-white hover:bg-white/10"

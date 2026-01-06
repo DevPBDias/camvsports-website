@@ -1,20 +1,21 @@
 "use client";
 
-import { Instagram } from "lucide-react";
 import { SOCIAL_LINKS } from "@/constants/social";
+import whatsappIcon from "@/assets/icons-logo/whatsapp.png";
+import Image from "next/image";
 
-interface InstagramLinkProps {
+interface WhatsappLinkProps {
   showUsername?: boolean;
   variant?: "header" | "footer";
   className?: string;
 }
 
-export function InstagramLink({
+export function WhatsappLink({
   showUsername = true,
   variant = "header",
   className = "",
-}: InstagramLinkProps) {
-  const { url, username } = SOCIAL_LINKS.instagram;
+}: WhatsappLinkProps) {
+  const { url } = SOCIAL_LINKS.whatsapp;
 
   const variantStyles = {
     header:
@@ -28,13 +29,16 @@ export function InstagramLink({
       href={url}
       target="_blank"
       rel="noreferrer"
-      aria-label={`Seguir CAMV Sports no Instagram: @${username}`}
+      aria-label={`Contate o CAMV Sports no Whatsapp`}
       className={`${variantStyles[variant]} ${className}`}
     >
-      <Instagram size={18} color="white" />
-      {showUsername && variant === "header" && (
-        <span className="hidden xl:flex">{username}</span>
-      )}
+      <Image
+        src={whatsappIcon}
+        alt="Whatsapp"
+        width={18}
+        height={18}
+        className="object-contain"
+      />
     </a>
   );
 }

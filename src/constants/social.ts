@@ -4,6 +4,10 @@ export const SOCIAL_LINKS = {
     username: "@camv_supervolei",
     label: "Instagram",
   },
+  whatsapp: {
+    url: "https://wa.me/5562981994689",
+    label: "Whatsapp",
+  },
 } as const;
 
 export type SocialPlatform = keyof typeof SOCIAL_LINKS;

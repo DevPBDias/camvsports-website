@@ -9,6 +9,7 @@ import { VolleyNet } from "./VolleyNet";
 import { InstagramLink } from "@/components/ui/InstagramLink";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { SOCIAL_LINKS } from "@/constants/social";
+import { WhatsappLink } from "../ui/WhatsappLink";
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
           className="flex justify-center"
         >
           <CTAButton
-            href={SOCIAL_LINKS.instagram.url}
+            href={SOCIAL_LINKS.whatsapp.url}
             icon={ArrowUpRight}
             iconPosition="right"
             external
@@ -68,6 +69,7 @@ const Footer = () => {
           className="lg:flex items-center gap-3 text-xs text-white/70"
         >
           <InstagramLink variant="footer" showUsername={false} />
+          <WhatsappLink variant="footer" />
         </motion.div>
       </div>
 

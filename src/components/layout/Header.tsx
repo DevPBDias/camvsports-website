@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import heroLogo from "@/assets/icons-logo/Logo CAMV Sports.png";
 import { NAV_LINKS } from "@/constants/navigation";
 import { InstagramLink } from "@/components/ui/InstagramLink";
+import { WhatsappLink } from "../ui/WhatsappLink";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,6 +80,7 @@ export function Header() {
         className="lg:flex items-center gap-3 text-xs text-white/70 hidden"
       >
         <InstagramLink variant="header" showUsername={false} />
+        <WhatsappLink variant="header" />
       </motion.div>
 
       {/* Botão burger (mobile/tablet) */}

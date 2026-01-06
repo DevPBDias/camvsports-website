@@ -58,7 +58,7 @@ export function TechnicalTeamSection() {
                   src={staff.image || user}
                   alt={staff.name}
                   fill
-                  className="object-cover"
+                  className={`${staff.orientation} object-cover`}
                   sizes="(min-width: 1024px) 128px, 112px"
                 />
               </div>
