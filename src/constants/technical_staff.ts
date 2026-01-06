@@ -41,7 +41,6 @@ export const technical_staff: ITechnicalStaff[] = [
     name: "Marco Túlio",
     role: "Social Media",
     image: marrekoPhoto,
-    orientation: "object-top",
   },
   {
     id: 6,
