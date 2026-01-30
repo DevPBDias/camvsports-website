@@ -8,7 +8,7 @@ import { MedalsImage } from "./MedalsImage";
 export function ResultsSection() {
   return (
     <section
-      id="resultados"
+      id="conquistas"
       className="relative w-full min-h-screen flex flex-col bg-foreground lg:flex-row items-center justify-center overflow-hidden"
     >
       <MedalsImage />

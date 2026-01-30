@@ -7,7 +7,7 @@ export const MEDAL_COUNTS = [
   {
     id: "gold",
     label: "Ouros",
-    quantity: "29",
+    quantity: "28",
   },
   {
     id: "bronze",

@@ -21,8 +21,8 @@ export const achievements: IAchievements[] = [
         "Tricampeão Sub-19 Fem. - Supervôlei",
         "Tricampeão Sub-16 Fem. - Copa Sesi",
         "Bicampeão Sub-16 Masc. - Copa Sesi",
-        "Bicampeão Sub-18 Fem. - Copa União",
-        "Bicampeão Sub-16 Fem. - Copa União",
+        "Campeão Sub-18 Fem. - Copa União",
+        "Campeão Sub-16 Fem. - Copa União",
         "Bicampeão Sub-19 Masc. - Supervôlei",
         "Bicampeão Sub-17 Fem. - Supervôlei",
         "Campeão Sub-13 Fem. - Copa Gyn",
@@ -64,9 +64,6 @@ export const achievements: IAchievements[] = [
     year: 2025,
     tournaments: {
       regional: [
-        "Semifinalista Sub-15 Masc. e Fem. - Copa Pró-Vôlei",
-        "Semifinalista Sub-17 Masc. e Fem. - Copa Pró-Vôlei",
-        "Semifinalista Sub-19 Masc. e Fem. - Copa Pró-Vôlei",
         "4º lugar Sub-18 Fem. - Campeonato Goiano",
       ],
       nacional: [

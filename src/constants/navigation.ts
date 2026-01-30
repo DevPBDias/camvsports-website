@@ -3,8 +3,7 @@ export const NAV_LINKS = [
   { label: "PROJETO", href: "#historia" },
   { label: "COMISSÃO TÉCNICA", href: "#comissao-tecnica" },
   { label: "CONQUISTAS", href: "#conquistas" },
-  { label: "RESULTADOS", href: "#resultados" },
-  { label: "PATROCÍNIOS", href: "#patrocinios" },
+  { label: "PATROCINADORES", href: "#patrocinadores" },
   { label: "GALERIA", href: "#galeria" },
 ] as const;
 

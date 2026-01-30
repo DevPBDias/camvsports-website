@@ -49,7 +49,6 @@ function StatValue({ value, suffix = "" }: StatValueProps) {
 export function StatsSection() {
   return (
     <section
-      id="conquistas"
       className="flex items-center justify-center bg-[#01B6F5] px-6 py-16 sm:px-8 sm:py-20"
     >
       <div className="flex w-full max-w-md flex-col items-center gap-10 sm:max-w-lg lg:max-w-3xl xl:max-w-5xl lg:flex-row lg:items-stretch lg:justify-center">
