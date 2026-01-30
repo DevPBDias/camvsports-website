@@ -12,7 +12,7 @@ import { SOCIAL_LINKS } from "@/constants/social";
 export function SponsorsSection() {
   return (
     <section
-      id="patrocinios"
+      id="patrocinadores"
       className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-24"
       style={{
         background: "linear-gradient(to right, #0078D7 13%, #005096 73%)",
