@@ -66,7 +66,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
-          className="lg:flex items-center gap-3 text-xs text-white/70"
+          className="flex items-center gap-3 text-xs text-white/70"
         >
           <InstagramLink variant="footer" showUsername={false} />
           <WhatsappLink variant="footer" />
