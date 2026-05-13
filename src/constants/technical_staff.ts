@@ -5,7 +5,7 @@ import katiusciaPhoto from "@/assets/team/katiuscia.png";
 import tallysonPhoto from "@/assets/team/tallyson.jpeg";
 import fernandoPhoto from "@/assets/team/fernando.jpeg";
 import beatrizPhoto from "@/assets/team/beatriz.png";
-import pauloPhoto from "@/assets/team/paulo.jpeg";
+import arthurPhoto from "@/assets/team/arthur.jpeg";
 import julioPhoto from "@/assets/team/julio.png";
 import muriloPhoto from "@/assets/team/murilo.png";
 import georgiaPhoto from "@/assets/team/georgia.png";
@@ -79,9 +79,10 @@ export const technical_staff: ITechnicalStaff[] = [
   },
   {
     id: 8,
-    name: "Paulo Henrique Vaz",
+    name: "Arthur Miguel",
     role: "Estagiário",
-    image: pauloPhoto,
+    image: arthurPhoto,
+    orientation: "object-top",
   },
   {
     id: 9,
