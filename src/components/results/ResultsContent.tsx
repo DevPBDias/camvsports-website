@@ -14,7 +14,7 @@ export function ResultsContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="w-full text-background font-sans text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 mt-6 lg:mt-0 lg:mb-14 xl:mb-16"
+          className="w-full text-background font-sans text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 mt-6 sm:mt-8 lg:mt-20 2xl:mt-0"
         >
           Ao longo de nossa história, essas foram as medalhas que conquistamos.
           Em 2025, adicionamos mais estas medalhas:
