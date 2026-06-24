@@ -1,4 +1,4 @@
-import jeidePhoto from "@/assets/images/project_coach.jpeg";
+import jeidePhoto from "@/assets/images/project_coach.png";
 import diogoPhoto from "@/assets/team/diogo.jpeg";
 import marrekoPhoto from "@/assets/team/marreko.png";
 import katiusciaPhoto from "@/assets/team/katiuscia.png";
@@ -25,6 +25,7 @@ export const technical_staff: ITechnicalStaff[] = [
     name: "Jeide Rudgeri",
     role: "Treinadora & Gestora do Projeto",
     image: jeidePhoto,
+    orientation: "object-top",
   },
   {
     id: 10,

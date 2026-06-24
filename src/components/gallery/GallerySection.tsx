@@ -44,7 +44,7 @@ export function GallerySection() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                className={`object-cover ${image.orientation || "object-center"} transition-transform duration-500 group-hover:scale-105`}
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">
@@ -70,7 +70,7 @@ export function GallerySection() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`object-cover ${image.orientation || "object-center"} transition-transform duration-500 group-hover:scale-105`}
                   sizes="(min-width: 768px) 25vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-[#005096]/90 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end justify-center">

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import coachPhoto from "@/assets/images/project_coach.jpeg";
+import coachPhoto from "@/assets/images/project_coach.png";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function HistoryCoachSection() {
@@ -21,7 +21,7 @@ export function HistoryCoachSection() {
             src={coachPhoto}
             alt="Jeide Rudgeri, treinadora do CAMV Sports"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             sizes="(min-width: 1024px) 50vw, 100vw"
             priority
           />
