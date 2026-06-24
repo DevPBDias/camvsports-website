@@ -1,15 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ResultsMedals } from "./ResultsMedals";
 import { ResultsCarousel } from "./ResultsCarousel";
-import { SectionTitle } from "@/components/ui/SectionTitle";
 
 export function ResultsContent() {
   return (
     <>
-      <ResultsMedals />
-
       {/* Container para textos - centralizado e com largura responsiva */}
       <div className="relative z-30 w-full lg:w-3/5 flex flex-col items-center px-4 sm:px-6 lg:px-8 gap-6">
         {/* Introductory Text */}
@@ -18,7 +14,7 @@ export function ResultsContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="w-full text-background font-sans text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 mt-6 sm:mt-8 md:mt-10 lg:mb-14 xl:mb-16"
+          className="w-full text-background font-sans text-center text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-6 sm:mb-8 mt-6 lg:mt-0 lg:mb-14 xl:mb-16"
         >
           Ao longo de nossa história, essas foram as medalhas que conquistamos.
           Em 2025, adicionamos mais estas medalhas:

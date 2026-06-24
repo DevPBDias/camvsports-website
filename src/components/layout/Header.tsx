@@ -33,7 +33,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-4 sm:px-8 lg:px-12 xl:px-16 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 flex items-center justify-between px-6 py-4 sm:px-8 lg:px-12 xl:px-16 transition-all duration-300 ${
         isScrolled
           ? "bg-[#005096]/95 shadow-lg backdrop-blur-md"
           : "bg-transparent"

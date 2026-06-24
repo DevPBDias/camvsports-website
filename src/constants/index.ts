@@ -11,6 +11,5 @@ export { achievements } from "./achivements";
 export { calendar_tournaments } from "./calendar_tournaments";
 export { sponsors } from "./sponsors";
 export { technical_staff } from "./technical_staff";
-export { MEDAL_COUNTS } from "./medals";
 export { GALLERY_IMAGES } from "./gallery";
 export { STATS_DATA } from "./stats";
