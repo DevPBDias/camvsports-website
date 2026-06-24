@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-import teamPhoto from "@/assets/images/project_team.png";
+import teamPhoto from "@/assets/images/new_project_team.jpg";
 import { SectionTag } from "@/components/ui/SectionTag";
 
 export function HistoryTeamSection() {
@@ -27,24 +26,20 @@ export function HistoryTeamSection() {
             </h2>
 
             <p className="w-full font-medium text-sm lg:text-base 2xl:text-xl leading-relaxed text-[#1E1E1E]/80 sm:text-base">
-              O projeto Centro de Atividades Mais Vôlei (CAMV) começou em agosto
-              de 2018 em Uberlândia (MG), com parceria da ABCD, do Instituto
-              Algar, do Governo de Minas Gerais e do Instituto Formação Vamos
-              Crescer.
+              O Centro de Atividades Mais Vôlei (CAMV) começou em agosto de 2018
+              em Uberlândia (MG), em parceria com a ABCD, o Instituto Algar, o
+              Governo de Minas Gerais e o Instituto Formação Vamos Crescer.
             </p>
             <p className="w-full font-medium text-sm lg:text-base 2xl:text-xl leading-relaxed text-[#1E1E1E]/80 sm:text-base">
-              O nosso intuito é atender atletas masculinos e femininos de 6 anos
-              até a categoria adulta, levando a prática do voleibol, mas também
-              trazendo valores morais em sua formação como indivíduo. Contamos
-              com mais de 200 atletas atendidas nesse tempo, totalizando mais de
-              2.000 durante esses sete anos de trabalho.
+              O nosso intuito sempre foi atender atletas masculinos e femininos
+              de seis anos até a categoria adulta, levando a prática do
+              voleibol, mas também trazendo valores morais em sua formação como
+              indivíduo.
             </p>
             <p className="w-full font-medium text-sm lg:text-base 2xl:text-xl leading-relaxed text-[#1E1E1E]/80 sm:text-base">
-              Em 2025, decidimos expandir o CAMV e trazê-lo para Goiânia (GO), e
-              o projeto tem Jeide Rudgeri como sua gestora. Assim como em
-              Uberlândia, Jeide possui uma trajetória vitoriosa no voleibol do
-              Estado de Goiás, sendo treinadora da Seleção Goiana por vários
-              anos.
+              Em 2025, decidimos expandir o CAMV e trazê-lo para Goiânia (GO),
+              com Jeide Rudgeri como gestora. Atualmente, temos dois Centros de
+              Treinamentos, contando com mais de 220 atletas.
             </p>
           </div>
 

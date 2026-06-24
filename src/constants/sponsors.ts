@@ -3,7 +3,7 @@ import logo_omni from "@/assets/icons-logo/logo_omni.png";
 import logo_evolua from "@/assets/icons-logo/logo_evolua.png";
 import logo_humanizart from "@/assets/icons-logo/logo_humanizart.png";
 import logo_kaizen from "@/assets/icons-logo/logo_kaizen.webp";
-import logo_lokamunck from "@/assets/icons-logo/logo_lokamunck.png";
+import logo_actvitta from "@/assets/icons-logo/logo_actvitta.png";
 import logo_vd from "@/assets/icons-logo/logo_vd.png";
 
 export type ISponsors = {
@@ -35,8 +35,8 @@ export const sponsors: ISponsors[] = [
   },
   {
     id: 5,
-    sponsor_name: "Lokamunck",
-    logo: logo_lokamunck,
+    sponsor_name: "ACT Vitta",
+    logo: logo_actvitta,
   },
   {
     id: 6,

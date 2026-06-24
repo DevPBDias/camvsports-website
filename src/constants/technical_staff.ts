@@ -1,4 +1,4 @@
-import jeidePhoto from "@/assets/images/project_coach.png";
+import jeidePhoto from "@/assets/images/project_coach.jpeg";
 import diogoPhoto from "@/assets/team/diogo.jpeg";
 import marrekoPhoto from "@/assets/team/marreko.png";
 import katiusciaPhoto from "@/assets/team/katiuscia.png";
@@ -80,13 +80,13 @@ export const technical_staff: ITechnicalStaff[] = [
   {
     id: 8,
     name: "Arthur Miguel",
-    role: "Estagiário",
+    role: "Treinador",
     image: arthurPhoto,
     orientation: "object-top",
   },
   {
     id: 9,
-    name: "Tallysson Cavalcante",
+    name: "Tallysson Cavalcanti",
     role: "Estagiário",
     image: tallysonPhoto,
   },

@@ -1,6 +1,6 @@
 import heroTeamPhoto from "@/assets/images/gallery_prizes.png";
 import projectTeamPhoto from "@/assets/images/project_team.png";
-import projectCoachPhoto from "@/assets/images/project_coach.png";
+import projectCoachPhoto from "@/assets/images/project_coach.jpeg";
 import manTeamPhoto from "@/assets/images/man_team.png";
 import womenTeamPhoto from "@/assets/images/women_team.png";
 
@@ -17,13 +17,13 @@ export const GALLERY_IMAGES = [
   },
   {
     id: 3,
-    src: projectCoachPhoto,
-    alt: "Treinadora da CAMV Sports",
+    src: projectTeamPhoto,
+    alt: "Equipe feminina CAMV Sports",
   },
   {
     id: 4,
-    src: projectTeamPhoto,
-    alt: "Equipe feminina CAMV Sports",
+    src: projectCoachPhoto,
+    alt: "Treinadora da CAMV Sports",
   },
   {
     id: 5,
